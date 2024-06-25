@@ -3,16 +3,15 @@ import "@/app/[locale]/scss/globals.scss";
 import "@/app/[locale]/scss/pages/myAccount.scss";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
+import OrderList from "../../components/orders/OrderList";
 import Image from "next/image";
+import Link from "next/link";
 import Nav from "react-bootstrap/Nav";
 import Tab from "react-bootstrap/Tab";
 import { useState } from "react";
-
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row, Tabs } from "react-bootstrap";
-
 // Assets
 import ProfileIcon from "../../../../../public/my_account/user-profile-black.svg";
 import CreditIcon from "../../../../../public/my_account/Credit card, Check, Done.svg";
@@ -22,15 +21,16 @@ import PremiumIcon from "../../../../../public/my_account/material-symbols-light
 import PinIcon from "../../../../../public/my_account/pin-sign.svg";
 import ReturnsIcon from "../../../../../public/my_account/rotate-refresh-loading.2.svg";
 import WalletIcon from "../../../../../public/my_account/wallet-2.svg";
+import { FcProcess } from "react-icons/fc";
 import Iphone11 from "../../../../../public/products/iphone-11-product.png";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { IoMdArrowDropdown } from "react-icons/io";
-import { FcProcess } from "react-icons/fc";
 import { CiCircleCheck } from "react-icons/ci";
 import MAsterCardIcon from "../../../../../public/my_account/master-card.png";
 import { MdOutlineAccountBalanceWallet } from "react-icons/md";
 import { LiaMoneyBillWaveAltSolid } from "react-icons/lia";
 import ProfileImage from "../../../../../public/seller_profile/profile_image.jpg";
+
 
 // Components
 
@@ -262,29 +262,7 @@ export default function MyAccount() {
                   </div>
                 </div>
               )}
-              {currentTab === "MyOrders" && (
-                <div className="flex flex-col gap-3">
-                  <div className="title-wrapper flex items-center justify-between mb-3">
-                    <span className="text-[20px] md:text-[30px] font-semibold">
-                      My Orders
-                    </span>
-                    <div className="flex items-end justify-end gap-1">
-                      <span className="text-[12px] md:text-[14px] font-normal">
-                        Last 3 months
-                      </span>
-                      <IoMdArrowDropdown size={20} />
-                    </div>
-                  </div>
-                  <div className="w-full flex flex-col gap-4">
-                    <div className="flex flex-col gap-2 mx-auto items-center justify-center">
-                      <CiCircleCheck size={60} />
-                    </div>
-                    <span className="text-[18px] font-medium mx-auto">
-                      Work on this page
-                    </span>
-                  </div>
-                </div>
-              )}
+              {currentTab === "MyOrders" && <OrderList/>}
               {currentTab === "MyAddress" && (
                 <div className="flex flex-col gap-5">
                   <div className="title-wrapper flex flex-col gap-2">
