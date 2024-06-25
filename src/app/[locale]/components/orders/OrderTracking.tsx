@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const OrderTracking: React.FC = () => {
@@ -19,26 +18,26 @@ const OrderTracking: React.FC = () => {
           </div>
           <div className="flex items-center space-x-6">
             <div className="text-center">
-              <div className="w-8 h-8 rounded-full bg-green-500 text-white mx-auto">1</div>
-              <p className="text-sm mt-2">On April 5</p>
+              <div className="w-8 h-8 rounded-full bg-green-800 text-white mx-auto"><img className="p-2 pl-2 pt-2" src="/icons/status/received.svg" alt="" /></div>
+              <p className="text-sm mt-2 mb-4">On April 5</p>
             </div>
             <div className="text-center">
-              <div className="w-8 h-8 rounded-full bg-gray-300 text-gray-600 mx-auto">2</div>
+              <div className="w-8 h-8 rounded-full  bg-green-800 text-gray-600 mx-auto"><img className="p-2 pl-2 pt-2" src="/icons/status/onprocess.svg" alt="" /></div>
               <p className="text-sm mt-2">In process</p>
               <p className="text-xs text-gray-500">On Friday, April 5th</p>
             </div>
             <div className="text-center">
-              <div className="w-8 h-8 rounded-full bg-gray-300 text-gray-600 mx-auto">3</div>
+              <div className="w-8 h-8 rounded-full  bg-green-800 text-gray-600 mx-auto"><img className="p-2 pl-2 pt-2" src="/icons/status/confirmed.svg" alt="" /></div>
               <p className="text-sm mt-2">Confirmed</p>
               <p className="text-xs text-gray-500">On Friday, April 5th</p>
             </div>
             <div className="text-center">
-              <div className="w-8 h-8 rounded-full bg-gray-300 text-gray-600 mx-auto">4</div>
+              <div className="w-8 h-8 rounded-full  bg-green-800 text-gray-600 mx-auto"><img className="p-2 pl-2 pt-2" src="/icons/status/confirmed.svg" alt="" /></div>
               <p className="text-sm mt-2">It was received</p>
               <p className="text-xs text-gray-500">On Friday, April 7th</p>
             </div>
             <div className="text-center">
-              <div className="w-8 h-8 rounded-full bg-gray-300 text-gray-600 mx-auto">5</div>
+              <div className="w-8 h-8 rounded-full  bg-green-800 text-gray-600 mx-auto"><img className="p-2 pl-2 pt-2" src="/icons/status/delivered.svg" alt="" /></div>
               <p className="text-sm mt-2">Delivery</p>
               <p className="text-xs text-gray-500">Expected Sunday 20th</p>
             </div>
